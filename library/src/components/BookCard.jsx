@@ -1,6 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const BookCard = ({ book }) => {
+
+  const navigate = useNavigate();
+
   const formatCurrencyBRL = (value) => {
     return new Intl.NumberFormat('pt-BR', {
       style: 'currency',
@@ -8,10 +13,16 @@ const BookCard = ({ book }) => {
     }).format(value);
   };
 
+  const handleBookClick= () => {
+
+    navigate('/sales');
+
+  }
+
   const placeholderImage = "src/img/capa_ilustrativa.png";
 
   return (
-    <div className='max-w-48 p-3 cursor-pointer flex flex-col gap-3 items-center rounded z-10 
+    <div onClick={() => handleBookClick()} className='max-w-48 p-3 cursor-pointer flex flex-col gap-3 items-center rounded z-10 
     transform transition-transform duration-300 hover:scale-105'>
       <div>
         <img src={book.image ? book.image : placeholderImage} alt="Imagem de um livro" />
