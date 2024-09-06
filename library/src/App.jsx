@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Outlet } from 'react-router-dom';
 import axios from 'axios';
 import BookCard from './components/BookCard';
 import Books from './components/Books';
@@ -32,8 +33,8 @@ function App() {
 
     <Header/>
 
-    <Books/>
-        
+    <Outlet/>
+
     {/* {
         books.map((book) => 
         
