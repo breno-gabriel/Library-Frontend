@@ -11,7 +11,8 @@ const BookCard = ({ book }) => {
   const placeholderImage = "src/img/capa_ilustrativa.png";
 
   return (
-    <div className='max-w-48 flex flex-col gap-3 items-center rounded'>
+    <div className='max-w-48 p-3 cursor-pointer flex flex-col gap-3 items-center rounded z-10 
+    transform transition-transform duration-300 hover:scale-105'>
       <div>
         <img src={book.image ? book.image : placeholderImage} alt="Imagem de um livro" />
       </div>
@@ -21,7 +22,7 @@ const BookCard = ({ book }) => {
         <p className='text-center font-light text-lg'>{book.publisher}</p>
         <p className='text-center font-bold text-lg text-green-400'>{formatCurrencyBRL(book.price)}</p>
       </div>
-      <button className='border-2 border-orange-500 w-44 text-orange-500'>Comprar</button>
+      <button className='border-2 border-orange-500 w-44 text-orange-500'>Adicionar ao carrinho</button>
     </div>
   );
 };
