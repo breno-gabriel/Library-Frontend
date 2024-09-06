@@ -5,9 +5,7 @@ import Books from '../components/Books'
 const BookPurchasePage = () => {
   return (
     <div>
-
-          <Books/>
-
+        <Books/>
     </div>
   )
 }

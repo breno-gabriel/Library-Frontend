@@ -5,6 +5,7 @@ import App from './App.jsx';
 import './index.css';
 import BookPurchasePage from './pages/BookPurchasePage.jsx';
 import BookSalesPage from './pages/BookSalesPage.jsx';
+import BookDetailsPage from './pages/BookDetailsPage.jsx';
 
 // const router = createBrowserRouter([
 //   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/sales',
         element: <BookSalesPage />
+      }, 
+      {
+        path: '/purchase/book-details/:id', 
+        element: <BookDetailsPage/>
       }
     ]
   }
