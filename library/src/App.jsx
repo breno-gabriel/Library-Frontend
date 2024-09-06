@@ -32,7 +32,7 @@ function App() {
 
     <Header/>
 
-    {/* <Books/> */}
+    <Books/>
         
     {/* {
         books.map((book) => 
