@@ -1,16 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import formatCurrencyBRL from '../utils/formatCurrency';
 
 const BookCard = ({ book }) => {
 
   const navigate = useNavigate();
-
-  const formatCurrencyBRL = (value) => {
-    return new Intl.NumberFormat('pt-BR', {
-      style: 'currency',
-      currency: 'BRL'
-    }).format(value);
-  };
 
   const handleBookClick= (id) => {
 

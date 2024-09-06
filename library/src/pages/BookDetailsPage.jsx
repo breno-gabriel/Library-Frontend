@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import formatCurrencyBRL from '../utils/formatCurrency';
 import axios from 'axios';
 
 const BookDetailsPage = () => {
@@ -34,7 +35,7 @@ const BookDetailsPage = () => {
         <div className='flex flex-col gap-1 text-sm lg:text-base'>
           <p><span className='font-semibold'>Editora:</span> <span className='text-gray-500'>{book.publisher}</span></p>
           <p><span className='font-semibold'>Ano:</span> <span className='text-gray-500'>{book.year}</span></p>
-          <p><span className='font-semibold'>Preço:</span> <span className='text-gray-500'>R$ {book.price}</span></p>
+          <p><span className='font-semibold'>Preço:</span> <span className='text-gray-500'>{formatCurrencyBRL(book.price)}</span></p>
           <p><span className='font-semibold'>Categoria:</span> <span className='text-gray-500'>{book.category}</span></p>
           <p><span className='font-semibold'>Vendedor:</span> <span className='text-gray-500'>{book.seller}</span></p>
           <p><span className='font-semibold'>Descrição:</span> <span className='text-gray-500'>{book.description}</span></p>
