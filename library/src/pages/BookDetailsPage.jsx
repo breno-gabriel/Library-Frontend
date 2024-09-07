@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import formatCurrencyBRL from '../utils/formatCurrency';
 import axios from 'axios';
+import { useNavigate, useOutletContext } from 'react-router-dom';
+import AddCartButton from '@/components/AddCartButton';
 
 const BookDetailsPage = () => {
   const { id } = useParams();
   const [book, setBook] = useState(null);
+  const { handleAddToCart } = useOutletContext();
+
 
   useEffect(() => {
     const fetchBookDetails = async () => {
@@ -37,10 +41,11 @@ const BookDetailsPage = () => {
           <p><span className='font-semibold'>Ano:</span> <span className='text-gray-500'>{book.year}</span></p>
           <p><span className='font-semibold'>Preço:</span> <span className='text-gray-500'>{formatCurrencyBRL(book.price)}</span></p>
           <p><span className='font-semibold'>Categoria:</span> <span className='text-gray-500'>{book.category}</span></p>
-          <p><span className='font-semibold'>Vendedor:</span> <span className='text-gray-500'>{book.seller}</span></p>
+          <p><span className='font-semibold'>Vendedor:</span> <span className='text-gray-500'>{book.seller_name}</span></p>
           <p><span className='font-semibold'>Descrição:</span> <span className='text-gray-500'>{book.description}</span></p>
         </div>
-        <button className='border-2 border-orange-500 w-full lg:w-44 text-orange-500 py-2 lg:py-0'>Adicionar ao carrinho</button>
+        {/* <button className='border-2 border-orange-500 w-full lg:w-44 text-orange-500 py-2 lg:py-0'>Adicionar ao carrinho</button> */}
+        <AddCartButton book={book} handleAddToCart={handleAddToCart}/>
       </section>
     </div>
   );
