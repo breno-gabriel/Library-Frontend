@@ -2,6 +2,7 @@ import React from 'react';
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import axios from 'axios'; // Importar Axios
 import { Button } from "@/components/ui/button";
 import {
     Form,
@@ -52,7 +53,7 @@ const formSchema = z.object({
     image: z.string().optional(),
 });
 
-const SaleForms = () => {
+const SaleForms = ({setForms}) => {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -67,14 +68,24 @@ const SaleForms = () => {
         },
     });
 
-    function onSubmit(values) {
-        console.log(values);
+    const handleCancelCLick = () => {
+        setForms(false); 
+    }
+
+    const onSubmit = async (values) => {
+        try {
+            const response = await axios.post('http://localhost:3000/books', values);
+            console.log('Response:', response.data);
+            setForms(false);
+        } catch (error) {
+            console.error('Error:', error);
+        }
     }
 
     return (
-        <WrapperCard label="Coloque o seu livro a venda" details="Preencha os campos abaixo">
+        <>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-6 mt-52">
                     <div className='flex flex-col md:flex-row md:gap-20'>
                         <div className="w-full md:w-1/2 space-y-4">
                             <FormField
@@ -187,11 +198,11 @@ const SaleForms = () => {
                     </div>
                     <div className='flex justify-center gap-10'>
                         <Button type="submit">Confirmar</Button>
-                        <Button type="button">Cancelar</Button>
+                        <Button onClick={handleCancelCLick} type="button">Cancelar</Button>
                     </div>
                 </form>
             </Form>
-        </WrapperCard>
+        </>
     );
 }
 

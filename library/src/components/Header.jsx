@@ -17,14 +17,18 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from 'react-router-dom';
 import { GiTakeMyMoney } from "react-icons/gi";
 
-const Header = ({ cart, setCart, forms, setForms }) => {
+const Header = ({ setCart, setForms, forms }) => {
   const [isPurchase, setIsPurchase] = useState(true);
 
   const navigate = useNavigate();
 
   const handlePurchasePageClick = () => {
-    navigate(`/purchase`);
-    setIsPurchase(true);
+    if (!forms) {
+      navigate(`/purchase`);
+      setIsPurchase(true);
+    }else {
+      alert("Você não pode sair enquanto ocorreu uma operação de venda")
+    }
   };
 
   const handleSalePageClick = () => {
@@ -33,7 +37,7 @@ const Header = ({ cart, setCart, forms, setForms }) => {
   };
 
   const handleSaleForm = () => {
-    
+    setForms(true)
   };
 
   return (

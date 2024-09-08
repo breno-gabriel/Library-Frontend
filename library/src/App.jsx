@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import "./App.css";
@@ -15,6 +15,7 @@ import {
 import { FaCheckCircle } from "react-icons/fa";
 import SaleForms from './components/SaleForms';
 import WrapperCard from './components/WrapperCard';
+import axios from 'axios';
 
 
 function App() {
@@ -29,8 +30,8 @@ function App() {
 
   return (
     <>
-      <Header cart={cart} setCart={setCart} forms = {forms} setForms = {setForms} />
-      {/* <Outlet context={{ handleAddToCart }} /> */}
+      <Header setCart={setCart} setForms = {setForms} forms = {forms} />
+      <Outlet context={{ handleAddToCart }} />
       {cart && <Cart purchaseBooks={purchaseBooks} setPurchaseBooks = {setPurchaseBooks} setCart={setCart} setPurchaseConclusion={setPurchaseConclusion}/>}
       {/* {purchaseConclusion && 
           <Card className="mt-72 mb-60 w-96 h-auto flex flex-col justify-center items-center">
@@ -39,7 +40,7 @@ function App() {
               <h2 className='text-xl text-green-300'>Compra realizada</h2>
             </CardContent>
           </Card>} */}
-      <SaleForms/>
+      {forms && <SaleForms setForms = {setForms}/>}
 
     </>
   );
