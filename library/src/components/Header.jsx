@@ -13,8 +13,8 @@ const Header = ({cart, setCart}) => {
         <h3 className='text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl'>BookParadise</h3>
       </div>
       <button>
-          <FaShoppingCart onMouseOver={() => setCart(true)} onMouseOut={() => setCart(false)} className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white' />
-      </button>   
+          <FaShoppingCart onClick={() => cart ? setCart(false) : setCart(true)} className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white' />
+      </button>  
     </header>
   );
 };

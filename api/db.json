@@ -1,210 +1,114 @@
 {
-    "books": [
-        {
-            "id": 1,
-            "title": "Apocalipse Z",
-            "author": "Manel Loureiro",
-            "publisher": "Planeta",
-            "image": "",
-            "price": 9.00,
-            "category_id": 2,
-            "description": "Um thriller de terror que narra a luta pela sobrevivência em um mundo devastado por um apocalipse zumbi.",
-            "year": 2010,
-            "seller_name": "João Silva"
-        },
-        {
-            "id": 2,
-            "title": "1984",
-            "author": "George Orwell",
-            "publisher": "Companhia das Letras",
-            "image": "",
-            "price": 15.00,
-            "category_id": 1,
-            "description": "Uma distopia clássica que explora temas de totalitarismo, vigilância e controle social.",
-            "year": 1949,
-            "seller_name": "Maria Oliveira"
-        },
-        {
-            "id": 3,
-            "title": "The Lord of the Rings",
-            "author": "J.R.R. Tolkien",
-            "publisher": "HarperCollins",
-            "image": "",
-            "price": 18.00,
-            "category_id": 3,
-            "description": "Uma épica aventura de fantasia que segue a jornada de Frodo Bolseiro para destruir o Um Anel.",
-            "year": 1954,
-            "seller_name": "Carlos Santos"
-        },
-        {
-            "id": 4,
-            "title": "Don Quixote",
-            "author": "Miguel de Cervantes",
-            "publisher": "Penguin Classics",
-            "image": "",
-            "price": 23.00,
-            "category_id": 3,
-            "description": "A história de um cavaleiro errante que, junto com seu fiel escudeiro Sancho Pança, embarca em aventuras cômicas e trágicas.",
-            "year": 1605,
-            "seller_name": "Ana Souza"
-        },
-        {
-            "id": 5,
-            "title": "Animal Farm",
-            "author": "George Orwell",
-            "publisher": "Companhia das Letras",
-            "image": "",
-            "price": 100.00,
-            "category_id": 1,
-            "description": "Uma fábula política que satiriza a corrupção do poder através da história de uma revolta animal em uma fazenda.",
-            "year": 1945,
-            "seller_name": "Maria Oliveira"
-        },
-        {
-            "id": 6,
-            "title": "The Little Prince",
-            "author": "Antoine de Saint-Exupéry",
-            "publisher": "HarperCollins",
-            "image": "",
-            "price": 12.45,
-            "category_id": 6,
-            "description": "Um conto filosófico e poético sobre um príncipe que viaja de planeta em planeta, aprendendo lições sobre a vida e a humanidade.",
-            "year": 1943,
-            "seller_name": "Carlos Santos"
-        },
-        {
-            "id": 7,
-            "title": "How to Win Friends and Influence People",
-            "author": "Dale Carnegie",
-            "publisher": "Companhia das Letras",
-            "image": "",
-            "price": 150.80,
-            "category_id": 5,
-            "description": "Um guia clássico de autodesenvolvimento que oferece técnicas práticas para melhorar habilidades sociais e de comunicação.",
-            "year": 1936,
-            "seller_name": "João Silva"
-        },
-        {
-            "id": 8,
-            "title": "The Da Vinci Code",
-            "author": "Dan Brown",
-            "publisher": "Arqueiro",
-            "image": "",
-            "price": 88.00,
-            "category_id": 4,
-            "description": "Um thriller de mistério que segue o simbologista Robert Langdon enquanto ele desvenda segredos ocultos na arte e na história.",
-            "year": 2003,
-            "seller_name": "Ana Souza"
-        },
-        {
-            "id": 9,
-            "title": "Harry Potter and the Philosopher's Stone",
-            "author": "J.K. Rowling",
-            "publisher": "Rocco",
-            "image": "",
-            "price": 19.00,
-            "category_id": 6,
-            "description": "O primeiro livro da série Harry Potter, onde o jovem bruxo descobre seu destino e começa sua educação mágica em Hogwarts.",
-            "year": 1997,
-            "seller_name": "Carlos Santos"
-        },
-        {
-            "id": 10,
-            "title": "The Name of the Wind",
-            "author": "Patrick Rothfuss",
-            "publisher": "Arqueiro",
-            "image": "",
-            "price": 35.00,
-            "category_id": 3,
-            "description": "A história de um jovem prodígio que se torna uma lenda no mundo da magia.",
-            "year": 2007,
-            "seller_name": "Ana Souza"
-        },
-        {
-            "id": 11,
-            "title": "Neuromancer",
-            "author": "William Gibson",
-            "publisher": "Aleph",
-            "image": "",
-            "price": 22.00,
-            "category_id": 1,
-            "description": "Um romance pioneiro no gênero cyberpunk que explora um futuro distópico e tecnológico.",
-            "year": 1984,
-            "seller_name": "João Silva"
-        },
-        {
-            "id": 12,
-            "title": "It",
-            "author": "Stephen King",
-            "publisher": "Suma de Letras",
-            "image": "",
-            "price": 45.00,
-            "category_id": 2,
-            "description": "Um grupo de amigos enfrenta uma entidade malévola que aterroriza uma pequena cidade.",
-            "year": 1986,
-            "seller_name": "Maria Oliveira"
-        },
-        {
-            "id": 13,
-            "title": "Dune",
-            "author": "Frank Herbert",
-            "publisher": "Aleph",
-            "image": "",
-            "price": 55.00,
-            "category_id": 1,
-            "description": "Uma épica saga de ficção científica sobre poder, política e ecologia em um planeta desértico.",
-            "year": 1965,
-            "seller_name": "João Silva"
-        },
-        {
-            "id": 14,
-            "title": "The Art of War",
-            "author": "Sun Tzu",
-            "publisher": "Penguin Books",
-            "image": "",
-            "price": 25.00,
-            "category_id": 5,
-            "description": "Um antigo tratado militar que oferece lições estratégicas aplicáveis a várias áreas da vida.",
-            "year": -500,
-            "seller_name": "Carlos Santos"
-        },
-        {
-            "id": 15,
-            "title": "The Hobbit",
-            "author": "J.R.R. Tolkien",
-            "publisher": "HarperCollins",
-            "image": "",
-            "price": 20.00,
-            "category_id": 6,
-            "description": "A jornada de Bilbo Bolseiro enquanto ele parte em uma aventura para recuperar um tesouro guardado por um dragão.",
-            "year": 1937,
-            "seller_name": "Carlos Santos"
-        }
-    ],
-    "categories": [
-        {
-            "id": 1,
-            "type": "ficção científica"
-        },
-        {
-            "id": 2,
-            "type": "terror"
-        },
-        {
-            "id": 3,
-            "type": "romance"
-        },
-        {
-            "id": 4,
-            "type": "didático"
-        },
-        {
-            "id": 5,
-            "type": "autodesenvolvimento"
-        },
-        {
-            "id": 6,
-            "type": "infantil"
-        }
-    ]
+  "books": [
+    {
+      "id": "1",
+      "title": "Apocalipse Z",
+      "author": "Manel Loureiro",
+      "publisher": "Planeta",
+      "image": "",
+      "price": 9,
+      "category_id": 2,
+      "description": "Um thriller de terror que narra a luta pela sobrevivência em um mundo devastado por um apocalipse zumbi.",
+      "year": 2010,
+      "seller_name": "João Silva"
+    },
+    {
+      "id": "2",
+      "title": "1984",
+      "author": "George Orwell",
+      "publisher": "Companhia das Letras",
+      "image": "",
+      "price": 15,
+      "category_id": 1,
+      "description": "Uma distopia clássica que explora temas de totalitarismo, vigilância e controle social.",
+      "year": 1949,
+      "seller_name": "Maria Oliveira"
+    },
+    {
+      "id": "4",
+      "title": "Don Quixote",
+      "author": "Miguel de Cervantes",
+      "publisher": "Penguin Classics",
+      "image": "",
+      "price": 23,
+      "category_id": 3,
+      "description": "A história de um cavaleiro errante que, junto com seu fiel escudeiro Sancho Pança, embarca em aventuras cômicas e trágicas.",
+      "year": 1605,
+      "seller_name": "Ana Souza"
+    },
+    {
+      "id": "9",
+      "title": "Harry Potter and the Philosopher's Stone",
+      "author": "J.K. Rowling",
+      "publisher": "Rocco",
+      "image": "",
+      "price": 19,
+      "category_id": 6,
+      "description": "O primeiro livro da série Harry Potter, onde o jovem bruxo descobre seu destino e começa sua educação mágica em Hogwarts.",
+      "year": 1997,
+      "seller_name": "Carlos Santos"
+    },
+    {
+      "id": "11",
+      "title": "Neuromancer",
+      "author": "William Gibson",
+      "publisher": "Aleph",
+      "image": "",
+      "price": 22,
+      "category_id": 1,
+      "description": "Um romance pioneiro no gênero cyberpunk que explora um futuro distópico e tecnológico.",
+      "year": 1984,
+      "seller_name": "João Silva"
+    },
+    {
+      "id": "12",
+      "title": "It",
+      "author": "Stephen King",
+      "publisher": "Suma de Letras",
+      "image": "",
+      "price": 45,
+      "category_id": 2,
+      "description": "Um grupo de amigos enfrenta uma entidade malévola que aterroriza uma pequena cidade.",
+      "year": 1986,
+      "seller_name": "Maria Oliveira"
+    },
+    {
+      "id": "14",
+      "title": "The Art of War",
+      "author": "Sun Tzu",
+      "publisher": "Penguin Books",
+      "image": "",
+      "price": 25,
+      "category_id": 5,
+      "description": "Um antigo tratado militar que oferece lições estratégicas aplicáveis a várias áreas da vida.",
+      "year": -500,
+      "seller_name": "Carlos Santos"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "type": "ficção científica"
+    },
+    {
+      "id": "2",
+      "type": "terror"
+    },
+    {
+      "id": "3",
+      "type": "romance"
+    },
+    {
+      "id": "4",
+      "type": "didático"
+    },
+    {
+      "id": "5",
+      "type": "autodesenvolvimento"
+    },
+    {
+      "id": "6",
+      "type": "infantil"
+    }
+  ]
 }

@@ -5,4 +5,5 @@ const formatCurrencyBRL = (value) => {
     }).format(value);
   };
 
-export default formatCurrencyBRL;
+export default formatCurrencyBRL; 
+
