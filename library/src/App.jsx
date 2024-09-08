@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <Header setCart={setCart} setForms = {setForms} forms = {forms} />
+      <Header setForms = {setForms} forms = {forms} />
       <Outlet context={{ handleAddToCart, saleBooks, setSaleBooks }} />
       {cart && <Cart purchaseBooks={purchaseBooks} setPurchaseBooks = {setPurchaseBooks} setCart={setCart} setPurchaseConclusion={setPurchaseConclusion}/>}
       {purchaseConclusion && 

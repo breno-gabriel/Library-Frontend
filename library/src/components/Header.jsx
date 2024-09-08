@@ -16,8 +16,9 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { useNavigate } from 'react-router-dom';
 import { GiTakeMyMoney } from "react-icons/gi";
+import { CiCirclePlus } from "react-icons/ci";
 
-const Header = ({ setCart, setForms, forms }) => {
+const Header = ({ setForms, forms }) => {
   const [isPurchase, setIsPurchase] = useState(true);
 
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ const Header = ({ setCart, setForms, forms }) => {
         <h3 className='text-white text-lg sm:text-xl md:text-2xl lg:text-3xl'>BookParadise</h3>
       </div>
       <section className='flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10'>
-        <NavigationMenu>
+        {/* <NavigationMenu>
           <NavigationMenuList className="flex gap-2 sm:gap-4 md:gap-6">
             <NavigationMenuItem>
               <Button variant="link" onClick={handlePurchasePageClick} className={`text-sm sm:text-lg md:text-xl lg:text-2xl text-white ${isPurchase ? 'underline' : 'no-underline'}`}>
@@ -60,20 +61,12 @@ const Header = ({ setCart, setForms, forms }) => {
               </Button>
             </NavigationMenuItem>
           </NavigationMenuList>
-        </NavigationMenu>
+        </NavigationMenu> */}
         <button>
-          {isPurchase ? (
-            <FaShoppingCart
-              onMouseOver={() => setCart(true)}
-              onMouseOut={() => setCart(false)}
-              className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white'
-            />
-          ) : (
-            <GiTakeMyMoney
-              onClick={handleSaleForm}
-              className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white'
-            />
-          )}
+          <CiCirclePlus
+            onClick={() => setForms(true)}
+            className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white'
+          />
         </button>
       </section>
     </header>
