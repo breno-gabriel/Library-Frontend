@@ -13,10 +13,13 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { FaCheckCircle } from "react-icons/fa";
+import SaleForms from './components/SaleForms';
+import WrapperCard from './components/WrapperCard';
 
 
 function App() {
   const [cart, setCart] = useState(false);
+  const [forms, setForms] = useState(false);
   const [purchaseBooks, setPurchaseBooks] = useState([]);
   const [purchaseConclusion, setPurchaseConclusion] = useState(false); 
 
@@ -26,8 +29,8 @@ function App() {
 
   return (
     <>
-      <Header cart={cart} setCart={setCart} />
-      <Outlet context={{ handleAddToCart }} />
+      <Header cart={cart} setCart={setCart} forms = {forms} setForms = {setForms} />
+      {/* <Outlet context={{ handleAddToCart }} /> */}
       {cart && <Cart purchaseBooks={purchaseBooks} setPurchaseBooks = {setPurchaseBooks} setCart={setCart} setPurchaseConclusion={setPurchaseConclusion}/>}
       {/* {purchaseConclusion && 
           <Card className="mt-72 mb-60 w-96 h-auto flex flex-col justify-center items-center">
@@ -36,6 +39,8 @@ function App() {
               <h2 className='text-xl text-green-300'>Compra realizada</h2>
             </CardContent>
           </Card>} */}
+      <SaleForms/>
+
     </>
   );
 }
