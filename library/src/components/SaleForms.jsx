@@ -45,11 +45,6 @@ const formSchema = z.object({
     }, {
         message: "Ano inválido. O ano deve estar no passado ou presente.",
     }),
-    seller_name: z.string().min(2, {
-        message: "O nome do vendedor precisa de pelo menos dois caracteres.",
-    }).max(250, {
-        message: "Limite de 250 caracteres excedido.",
-    }),
     image: z.string().optional(),
 });
 
@@ -63,7 +58,6 @@ const SaleForms = ({setForms}) => {
             price: "",
             description: "",
             year: "",
-            seller_name: "",
             image: "",
         },
     });
@@ -176,19 +170,6 @@ const SaleForms = ({setForms}) => {
                                         <FormLabel>Ano</FormLabel>
                                         <FormControl>
                                             <Input placeholder="Digite o ano de lançamento da obra" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-                            <FormField
-                                control={form.control}
-                                name="seller_name"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>Nome do vendedor</FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="Digite o seu nome completo" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
