@@ -1,15 +1,14 @@
 import React from 'react';
 import CartItem from './CartItem';
+import capaIlustrativa from '../img/capa_ilustrativa.png'; // Importando a imagem
 
 const Cart = ({ purchaseBooks, setCart, setPurchaseBooks, setPurchaseConclusion }) => {
   const total = purchaseBooks.reduce((sum, book) => sum + book.price, 0);
 
   const handleConcluirCompra = () => {
-
     setPurchaseBooks([]);
     setPurchaseConclusion(true);
-
-  }
+  };
 
   return (
     <div
@@ -19,7 +18,13 @@ const Cart = ({ purchaseBooks, setCart, setPurchaseBooks, setPurchaseConclusion 
     >
       <div className='max-h-64 overflow-y-auto'>
         {purchaseBooks.map((book, index) => (
-          <CartItem key={index} id={book.id} title={book.title} price={book.price} image={book.image} />
+          <CartItem
+            key={index}
+            id={book.id}
+            title={book.title}
+            price={book.price}
+            image={book.image || capaIlustrativa} // Usando a imagem ilustrativa como fallback
+          />
         ))}
       </div>
       <div className='flex flex-col gap-6 mt-4'>
@@ -28,7 +33,9 @@ const Cart = ({ purchaseBooks, setCart, setPurchaseBooks, setPurchaseConclusion 
           <p>{`R$ ${total.toFixed(2)}`}</p>
         </div>
         <div className='flex justify-center'>
-          <button onClick={handleConcluirCompra} className='border-2 border-green-300 w-44 text-white bg-green-400 rounded h-12'>Concluir compra</button>
+          <button onClick={handleConcluirCompra} className='border-2 border-green-300 w-44 text-white bg-green-400 rounded h-12'>
+            Concluir compra
+          </button>
         </div>
       </div>
     </div>

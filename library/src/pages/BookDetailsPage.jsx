@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import formatCurrencyBRL from '../utils/formatCurrency';
 import axios from 'axios';
-import { useNavigate, useOutletContext } from 'react-router-dom';
+import { useOutletContext } from 'react-router-dom';
 import AddCartButton from '@/components/AddCartButton';
+import capaIlustrativa from '../img/capa_ilustrativa.png'; // Importando a imagem
 
 const BookDetailsPage = () => {
   const { id } = useParams();
   const [book, setBook] = useState(null);
   const { handleAddToCart } = useOutletContext();
-
 
   useEffect(() => {
     const fetchBookDetails = async () => {
@@ -20,7 +20,7 @@ const BookDetailsPage = () => {
         console.error('Erro ao buscar detalhes do livro:', error);
       }
     };
-    
+
     fetchBookDetails();
   }, [id]);
 
@@ -30,7 +30,11 @@ const BookDetailsPage = () => {
 
   return (
     <div className='flex flex-col lg:flex-row pt-16 lg:pt-80 gap-8 lg:gap-20 px-4 lg:px-16'>
-      <img className="w-full lg:w-1/2 h-auto object-cover" src={book.image || 'src/img/capa_ilustrativa.png'} alt={book.title} />
+      <img
+        className="w-full lg:w-1/2 h-auto object-cover"
+        src={book.image || capaIlustrativa}
+        alt={book.title}
+      />
       <section className='flex flex-col gap-6 lg:gap-14'>
         <div className='flex flex-col gap-2'>
           <h2 className='text-2xl lg:text-4xl text-gray-600'>{book.title}</h2>
@@ -44,8 +48,7 @@ const BookDetailsPage = () => {
           <p><span className='font-semibold'>Vendedor:</span> <span className='text-gray-500'>{book.seller_name}</span></p>
           <p><span className='font-semibold'>Descrição:</span> <span className='text-gray-500'>{book.description}</span></p>
         </div>
-        {/* <button className='border-2 border-orange-500 w-full lg:w-44 text-orange-500 py-2 lg:py-0'>Adicionar ao carrinho</button> */}
-        <AddCartButton book={book} handleAddToCart={handleAddToCart}/>
+        <AddCartButton book={book} handleAddToCart={handleAddToCart} />
       </section>
     </div>
   );

@@ -162,7 +162,7 @@ const SaleForms = ({setForms}) => {
                                     <FormItem>
                                         <FormLabel>Foto da obra</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="Faça aqui o upload de um arquivo de foto do livro" {...field} />
+                                            <Input placeholder="Coloque uma URL pública" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -181,7 +181,7 @@ const SaleForms = ({setForms}) => {
                                     </FormItem>
                                 )}
                             />
-                            <FormField
+                            {/* <FormField
                                 control={form.control}
                                 name="seller_name"
                                 render={({ field }) => (
@@ -193,7 +193,7 @@ const SaleForms = ({setForms}) => {
                                         <FormMessage />
                                     </FormItem>
                                 )}
-                            />
+                            /> */}
                         </div>
                     </div>
                     <div className='flex justify-center gap-10'>

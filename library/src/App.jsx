@@ -23,6 +23,7 @@ function App() {
   const [forms, setForms] = useState(false);
   const [purchaseBooks, setPurchaseBooks] = useState([]);
   const [purchaseConclusion, setPurchaseConclusion] = useState(false); 
+  const [saleBooks, setSaleBooks] = useState([]);
 
   const handleAddToCart = (book) => {
     setPurchaseBooks((prevBooks) => [...prevBooks, book]);
@@ -31,7 +32,7 @@ function App() {
   return (
     <>
       <Header setCart={setCart} setForms = {setForms} forms = {forms} />
-      <Outlet context={{ handleAddToCart }} />
+      <Outlet context={{ handleAddToCart, saleBooks, setSaleBooks }} />
       {cart && <Cart purchaseBooks={purchaseBooks} setPurchaseBooks = {setPurchaseBooks} setCart={setCart} setPurchaseConclusion={setPurchaseConclusion}/>}
       {/* {purchaseConclusion && 
           <Card className="mt-72 mb-60 w-96 h-auto flex flex-col justify-center items-center">
