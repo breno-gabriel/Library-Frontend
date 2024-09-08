@@ -40,7 +40,7 @@ function App() {
               <FaCheckCircle className='text-green-300 text-6xl'/>
               <h2 className='text-xl text-green-300'>Compra realizada</h2>
             </CardContent>
-          </Card>} */}
+          </Card>} 
       {forms && <SaleForms setForms = {setForms}/>}
 
     </>
