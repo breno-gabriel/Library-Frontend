@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useOutletContext } from 'react-router-dom';
 import AddCartButton from '@/components/AddCartButton';
 import capaIlustrativa from '../img/capa_ilustrativa.png'; // Importando a imagem
+import formatCurrencyBRL from '@/utils';
 
 const BookDetailsPage = () => {
   const { id } = useParams();
