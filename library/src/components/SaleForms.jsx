@@ -2,7 +2,7 @@ import React from 'react';
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import axios from 'axios'; // Importar Axios
+import axios from 'axios';
 import { Button } from "@/components/ui/button";
 import {
     Form,
@@ -12,6 +12,13 @@ import {
     FormLabel,
     FormMessage,
 } from "@/components/ui/form";
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } from "@/components/ui/select"
 import { Input } from "@/components/ui/input";
 import WrapperCard from './WrapperCard';
 
@@ -46,9 +53,12 @@ const formSchema = z.object({
         message: "Ano inválido. O ano deve estar no passado ou presente.",
     }),
     image: z.string().optional(),
+    category: z.string().min(1, {
+        message: "Categoria é obrigatória.",
+    }),
 });
 
-const SaleForms = ({setForms}) => {
+const SaleForms = ({ setForms }) => {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -59,12 +69,13 @@ const SaleForms = ({setForms}) => {
             description: "",
             year: "",
             image: "",
+            category: "", 
         },
     });
 
     const handleCancelCLick = () => {
-        setForms(false); 
-    }
+        setForms(false);
+    };
 
     const onSubmit = async (values) => {
         try {
@@ -74,12 +85,16 @@ const SaleForms = ({setForms}) => {
         } catch (error) {
             console.error('Error:', error);
         }
-    }
+    };
 
     return (
         <>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-6 mt-40 z-30 fixed bg-white p-20">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-6 mt-40 z-30 fixed bg-white p-20 rounded-md">
+                    <div className='flex flex-col gap-3'>
+                        <h2 className='text-center font-bold text-3xl'>Adicionando livro</h2>
+                        <p className='text-center text-gray-500 text-lg'>Preencha os campos abaixo</p>
+                    </div>
                     <div className='flex flex-col md:flex-row md:gap-20'>
                         <div className="w-full md:w-1/2 space-y-4">
                             <FormField
@@ -170,6 +185,30 @@ const SaleForms = ({setForms}) => {
                                         <FormLabel>Ano</FormLabel>
                                         <FormControl>
                                             <Input placeholder="Digite o ano de lançamento da obra" {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+                            <FormField
+                                control={form.control}
+                                name="category"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>Categoria</FormLabel>
+                                        <FormControl>
+                                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                                <SelectTrigger className="w-[180px]">
+                                                    <SelectValue placeholder="Selecione uma categoria" />
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectItem value="Ficção científica">Ficção científica</SelectItem>
+                                                    <SelectItem value="Terror">Terror</SelectItem>
+                                                    <SelectItem value="Infantil">Infantil</SelectItem>
+                                                    <SelectItem value="Didático">Didático</SelectItem>
+                                                    <SelectItem value="Literatura">Literatura</SelectItem>
+                                                </SelectContent>
+                                            </Select>
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>

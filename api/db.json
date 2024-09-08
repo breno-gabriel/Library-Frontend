@@ -7,10 +7,9 @@
       "publisher": "Planeta",
       "image": "",
       "price": 9,
-      "category_id": 2,
+      "category": "Horror",
       "description": "Um thriller de terror que narra a luta pela sobrevivência em um mundo devastado por um apocalipse zumbi.",
-      "year": 2010,
-      "seller_id": "2"
+      "year": 2010
     },
     {
       "id": "2",
@@ -19,10 +18,9 @@
       "publisher": "Companhia das Letras",
       "image": "",
       "price": 15,
-      "category_id": 1,
+      "category": "Fiction",
       "description": "Uma distopia clássica que explora temas de totalitarismo, vigilância e controle social.",
-      "year": 1949,
-      "seller_id": "3"
+      "year": 1949
     },
     {
       "id": "3",
@@ -31,10 +29,9 @@
       "publisher": "HarperCollins",
       "image": "",
       "price": 18,
-      "category_id": 3,
+      "category": "Adventure",
       "description": "Uma épica aventura de fantasia que segue a jornada de Frodo Bolseiro para destruir o Um Anel.",
-      "year": 1954,
-      "seller_id": "4"
+      "year": 1954
     },
     {
       "id": "4",
@@ -43,10 +40,9 @@
       "publisher": "Penguin Classics",
       "image": "",
       "price": 23,
-      "category_id": 3,
+      "category": "Adventure",
       "description": "A história de um cavaleiro errante que, junto com seu fiel escudeiro Sancho Pança, embarca em aventuras cômicas e trágicas.",
-      "year": 1605,
-      "seller_id": "5"
+      "year": 1605
     },
     {
       "id": "5",
@@ -55,10 +51,9 @@
       "publisher": "Companhia das Letras",
       "image": "",
       "price": 100,
-      "category_id": 1,
+      "category": "Fiction",
       "description": "Uma fábula política que satiriza a corrupção do poder através da história de uma revolta animal em uma fazenda.",
-      "year": 1945,
-      "seller_id": "3"
+      "year": 1945
     },
     {
       "id": "6",
@@ -67,10 +62,9 @@
       "publisher": "HarperCollins",
       "image": "",
       "price": 12.45,
-      "category_id": 6,
+      "category": "Fantasy",
       "description": "Um conto filosófico e poético sobre um príncipe que viaja de planeta em planeta, aprendendo lições sobre a vida e a humanidade.",
-      "year": 1943,
-      "seller_id": "4"
+      "year": 1943
     },
     {
       "id": "7",
@@ -79,10 +73,9 @@
       "publisher": "Companhia das Letras",
       "image": "",
       "price": 150.8,
-      "category_id": 5,
+      "category": "Self-Help",
       "description": "Um guia clássico de autodesenvolvimento que oferece técnicas práticas para melhorar habilidades sociais e de comunicação.",
-      "year": 1936,
-      "seller_id": "2"
+      "year": 1936
     },
     {
       "id": "8",
@@ -91,10 +84,9 @@
       "publisher": "Arqueiro",
       "image": "",
       "price": 88,
-      "category_id": 4,
+      "category": "Mystery",
       "description": "Um thriller de mistério que segue o simbologista Robert Langdon enquanto ele desvenda segredos ocultos na arte e na história.",
-      "year": 2003,
-      "seller_id": "5"
+      "year": 2003
     },
     {
       "id": "9",
@@ -103,10 +95,9 @@
       "publisher": "Rocco",
       "image": "",
       "price": 19,
-      "category_id": 6,
+      "category": "Fantasy",
       "description": "O primeiro livro da série Harry Potter, onde o jovem bruxo descobre seu destino e começa sua educação mágica em Hogwarts.",
-      "year": 1997,
-      "seller_id": "4"
+      "year": 1997
     },
     {
       "id": "10",
@@ -115,10 +106,9 @@
       "publisher": "Arqueiro",
       "image": "",
       "price": 35,
-      "category_id": 3,
+      "category": "Adventure",
       "description": "A história de um jovem prodígio que se torna uma lenda no mundo da magia.",
-      "year": 2007,
-      "seller_id": "5"
+      "year": 2007
     },
     {
       "id": "11",
@@ -127,10 +117,9 @@
       "publisher": "Aleph",
       "image": "",
       "price": 22,
-      "category_id": 1,
+      "category": "Fiction",
       "description": "Um romance pioneiro no gênero cyberpunk que explora um futuro distópico e tecnológico.",
-      "year": 1984,
-      "seller_id": "2"
+      "year": 1984
     },
     {
       "id": "12",
@@ -139,10 +128,9 @@
       "publisher": "Suma de Letras",
       "image": "",
       "price": 45,
-      "category_id": 2,
+      "category": "Horror",
       "description": "Um grupo de amigos enfrenta uma entidade malévola que aterroriza uma pequena cidade.",
-      "year": 1986,
-      "seller_id": "3"
+      "year": 1986
     },
     {
       "id": "13",
@@ -151,10 +139,9 @@
       "publisher": "Aleph",
       "image": "",
       "price": 55,
-      "category_id": 1,
+      "category": "Fiction",
       "description": "Uma épica saga de ficção científica sobre poder, política e ecologia em um planeta desértico.",
-      "year": 1965,
-      "seller_id": "2"
+      "year": 1965
     },
     {
       "id": "14",
@@ -163,10 +150,9 @@
       "publisher": "Penguin Books",
       "image": "",
       "price": 25,
-      "category_id": 5,
+      "category": "Self-Help",
       "description": "Um antigo tratado militar que oferece lições estratégicas aplicáveis a várias áreas da vida.",
-      "year": -500,
-      "seller_id": "4"
+      "year": -500
     },
     {
       "id": "15",
@@ -175,10 +161,9 @@
       "publisher": "HarperCollins",
       "image": "",
       "price": 20,
-      "category_id": 6,
+      "category": "Fantasy",
       "description": "A jornada de Bilbo Bolseiro enquanto ele parte em uma aventura para recuperar um tesouro guardado por um dragão.",
-      "year": 1937,
-      "seller_id": "4"
+      "year": 1937
     },
     {
       "id": "16",
@@ -188,7 +173,7 @@
       "price": 80.45,
       "description": "",
       "year": 2010,
-      "seller_id": "1",
+      "category": "Fiction",
       "image": ""
     },
     {
@@ -199,7 +184,7 @@
       "price": 10,
       "description": "",
       "year": 2010,
-      "seller_id": "1",
+      "category": "Fiction",
       "image": ""
     },
     {
@@ -207,10 +192,10 @@
       "title": "O Ateneu",
       "author": "Raul Pompeia",
       "publisher": "Ed. Francisco Alves e Cia",
-      "price": 12.70,
+      "price": 12.7,
       "description": "",
       "year": 1899,
-      "seller_id": "1",
+      "category": "Fiction",
       "image": ""
     },
     {
@@ -218,10 +203,10 @@
       "title": "O poço do Visconde",
       "author": "Monteiro Lobato",
       "publisher": "Cirando Cultural",
-      "price": 20.40,
+      "price": 20.4,
       "description": "",
       "year": 2020,
-      "seller_id": "1",
+      "category": "Fiction",
       "image": ""
     },
     {
@@ -232,66 +217,138 @@
       "price": 80.45,
       "description": "",
       "year": 2010,
-      "seller_id": "1",
+      "category": "Fiction",
       "image": ""
-    }
-  ],
-  "categories": [
-    {
-      "id": 1,
-      "type": "ficção científica"
     },
     {
-      "id": 2,
-      "type": "terror"
+      "id": "d6a0",
+      "title": "Senhora 2: O retorno",
+      "author": "José de Alencar",
+      "publisher": "Cirando Cultural ",
+      "price": "12.70",
+      "description": "",
+      "year": "2010",
+      "category": "Fiction",
+      "image": ""
     },
     {
-      "id": 3,
-      "type": "aventura"
+      "id": "d283",
+      "title": "livro de teste",
+      "author": "José de Alencar",
+      "publisher": "Cirando Cultural ",
+      "price": "25.90",
+      "description": "",
+      "year": "2009",
+      "category": "Fiction",
+      "image": ""
     },
     {
-      "id": 4,
-      "type": "mistério"
+      "id": "8d71",
+      "title": "teste 3",
+      "author": "José de Alencar",
+      "publisher": "Cirando Cultural ",
+      "price": "28.60",
+      "description": "",
+      "year": "2000",
+      "category": "Fiction",
+      "image": ""
     },
     {
-      "id": 5,
-      "type": "desenvolvimento pessoal"
+      "id": "779f",
+      "title": "teste 2",
+      "author": "José de Alencar",
+      "publisher": "Cirando Cultural ",
+      "price": "32.80",
+      "description": "",
+      "year": "2020",
+      "category": "Fiction",
+      "image": ""
     },
     {
-      "id": 6,
-      "type": "fantasia"
-    }
-  ],
-  "users": [
-    {
-      "id": "1",
-      "name": "Breno",
-      "email": "breno@example.com",
-      "password": "password1"
+      "id": "b96d",
+      "title": "teste 1",
+      "author": "José de Alencar",
+      "publisher": "Cirando Cultural ",
+      "price": "45.90",
+      "description": "",
+      "year": "2010",
+      "category": "Fiction",
+      "image": ""
     },
     {
-      "id": "2",
-      "name": "Maria Oliveira",
-      "email": "Maria@example.com",
-      "password": "password2"
+      "id": "764f",
+      "title": "The Kite Runner",
+      "author": "Khaled Hosseini",
+      "publisher": "Bloomsbury",
+      "price": 45,
+      "description": "",
+      "year": 2003,
+      "category": "Fiction",
+      "image": ""
     },
     {
-      "id": "3",
-      "name": "Paulo Jorge",
-      "email": "Paulo@example.com",
-      "password": "password3"
+      "id": "3d91",
+      "title": "O Guarani",
+      "author": "José de Alencar",
+      "publisher": "José Olympio",
+      "price": 99.99,
+      "description": "",
+      "year": 1900,
+      "category": "Fiction",
+      "image": ""
     },
     {
-      "id": "4",
-      "name": "Paula Souza",
-      "email": "Paula@example.com",
-      "password": "password4"
+      "id": "4d71",
+      "title": "O triste fim de Policarpo Quaresma",
+      "author": "Lima Barreto",
+      "publisher": "Clara Editora",
+      "price": 32.87,
+      "description": "",
+      "year": 1985,
+      "category": "Fiction",
+      "image": ""
     },
     {
-      "id": "5",
-      "name": "Ricardo Filho",
-      "email": "Ricardo@example.com",
-      "password": "password5"
+      "id": "4d81",
+      "title": "1984",
+      "author": "George Orwell",
+      "publisher": "Companhia das Letras",
+      "price": 150,
+      "description": "Uma distopia clássica que explora temas de totalitarismo, vigilância e controle social.",
+      "year": 1949,
+      "category": "Fiction",
+      "image": ""
+    },
+    {
+      "id": "4084",
+      "title": "livro de teste 2",
+      "author": "José de Alencar",
+      "publisher": "Cirando Cultural ",
+      "price": "25.90",
+      "description": "",
+      "year": "2009",
+      "image": ""
+    },
+    {
+      "id": "87c7",
+      "title": "Terceiro livro de testes",
+      "author": "Monteiro Lobato ",
+      "publisher": "Planeta",
+      "price": "25.90",
+      "description": "",
+      "year": "2020",
+      "image": ""
+    },
+    {
+      "id": "f86e",
+      "title": "Livro de teste 4 ",
+      "author": "Monteiro Lobato ",
+      "publisher": "Cirando Cultural ",
+      "price": "80.45",
+      "description": "",
+      "year": "1919",
+      "image": "",
+      "category": "Didático"
     }
   ]
 }
