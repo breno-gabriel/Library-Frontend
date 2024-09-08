@@ -37,18 +37,6 @@
       "seller_name": "Ana Souza"
     },
     {
-      "id": "8",
-      "title": "The Da Vinci Code",
-      "author": "Dan Brown",
-      "publisher": "Arqueiro",
-      "image": "",
-      "price": 88,
-      "category_id": 4,
-      "description": "Um thriller de mistério que segue o simbologista Robert Langdon enquanto ele desvenda segredos ocultos na arte e na história.",
-      "year": 2003,
-      "seller_name": "Ana Souza"
-    },
-    {
       "id": "9",
       "title": "Harry Potter and the Philosopher's Stone",
       "author": "J.K. Rowling",
@@ -95,29 +83,6 @@
       "description": "Um antigo tratado militar que oferece lições estratégicas aplicáveis a várias áreas da vida.",
       "year": -500,
       "seller_name": "Carlos Santos"
-    },
-    {
-      "id": "15",
-      "title": "The Hobbit",
-      "author": "J.R.R. Tolkien",
-      "publisher": "HarperCollins",
-      "image": "",
-      "price": 20,
-      "category_id": 6,
-      "description": "A jornada de Bilbo Bolseiro enquanto ele parte em uma aventura para recuperar um tesouro guardado por um dragão.",
-      "year": 1937,
-      "seller_name": "Carlos Santos"
-    },
-    {
-      "id": "31e3",
-      "title": "Triste Fim de Policarpo Quaresma",
-      "author": "Lima Barreto",
-      "publisher": "RIo ",
-      "price": 80.45,
-      "description": "",
-      "year": "2010",
-      "seller_name": "Breno Gabriel ",
-      "image": ""
     }
   ],
   "categories": [
