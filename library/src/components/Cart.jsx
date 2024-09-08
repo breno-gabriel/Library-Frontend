@@ -19,8 +19,8 @@ const Cart = ({ purchaseBooks, setCart, setPurchaseBooks, setPurchaseConclusion 
 
   return (
     <div
-      onMouseOver={() => setCart(true)}
-      onMouseOut={() => setCart(false)}
+      // onMouseOver={() => setCart(true)}
+      // onMouseOut={() => setCart(false)}
       className='mt-32 bg-white rounded-xl p-4 z-30 right-10 fixed w-64 shadow-lg'
     >
       <div className='max-h-64 overflow-y-auto'>
