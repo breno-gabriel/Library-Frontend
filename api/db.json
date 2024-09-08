@@ -223,6 +223,17 @@
       "seller_name": "Breno Gabriel ",
       "image": "",
       "id": 19
+    },
+    {
+      "title": "O Príncipe ",
+      "author": "Nicolau Maquiavel ",
+      "publisher": "Planeta",
+      "price": "35.90",
+      "description": "",
+      "year": "2010",
+      "seller_name": "Breno Gabriel ",
+      "image": "",
+      "id": 20
     }
   ],
   "categories": [

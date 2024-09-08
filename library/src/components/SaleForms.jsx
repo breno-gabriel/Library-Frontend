@@ -85,7 +85,7 @@ const SaleForms = ({setForms}) => {
     return (
         <>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-6 mt-52">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-6 mt-40 z-30 fixed bg-white p-20">
                     <div className='flex flex-col md:flex-row md:gap-20'>
                         <div className="w-full md:w-1/2 space-y-4">
                             <FormField
@@ -197,8 +197,8 @@ const SaleForms = ({setForms}) => {
                         </div>
                     </div>
                     <div className='flex justify-center gap-10'>
-                        <Button type="submit">Confirmar</Button>
-                        <Button onClick={handleCancelCLick} type="button">Cancelar</Button>
+                        <Button type="submit" className="text-white bg-green-300">Confirmar</Button>
+                        <Button onClick={handleCancelCLick} type="button" className="text-white bg-green-300">Cancelar</Button>
                     </div>
                 </form>
             </Form>
