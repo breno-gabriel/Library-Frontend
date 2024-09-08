@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
-import formatCurrencyBRL from '../utils/formatCurrency';
 import AddCartButton from './AddCartButton';
+import formatCurrencyBRL from '@/utils';
 
 const BookCard = ({ book }) => {
   const navigate = useNavigate();

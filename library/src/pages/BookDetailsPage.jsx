@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import formatCurrencyBRL from '../utils/formatCurrency';
 import axios from 'axios';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import AddCartButton from '@/components/AddCartButton';
+import formatCurrencyBRL from '@/utils';
 
 const BookDetailsPage = () => {
   const { id } = useParams();

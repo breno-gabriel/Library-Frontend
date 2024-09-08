@@ -1,5 +1,5 @@
 import React from 'react';
-import formatCurrencyBRL from '../utils/formatCurrency';
+import formatCurrencyBRL from '@/utils';
 
 const CartItem = ({ id, title, price, image }) => {
   const placeholderImage = "src/img/capa_ilustrativa.png";

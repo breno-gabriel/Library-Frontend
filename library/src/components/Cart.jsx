@@ -1,11 +1,17 @@
 import React from 'react';
 import CartItem from './CartItem';
+import deleteBook from '@/utils/deleteBook';
 
 const Cart = ({ purchaseBooks, setCart, setPurchaseBooks, setPurchaseConclusion }) => {
   const total = purchaseBooks.reduce((sum, book) => sum + book.price, 0);
 
   const handleConcluirCompra = () => {
 
+    purchaseBooks.map((book) => {
+
+      deleteBook(book.id);
+
+    })
     setPurchaseBooks([]);
     setPurchaseConclusion(true);
 
