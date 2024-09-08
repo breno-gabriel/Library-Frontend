@@ -19,7 +19,7 @@ const BookPurchasePage = () => {
 
   useEffect(() => {
     handleFetch();
-  }, []);
+  }, [books]);
 
   return (
     <div>

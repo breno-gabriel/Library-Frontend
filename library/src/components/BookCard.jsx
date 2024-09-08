@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import AddCartButton from './AddCartButton';
 import formatCurrencyBRL from '@/utils';
+import { FaTrashAlt } from "react-icons/fa";
+import DeleteButton from './DeleteButton';
 
 const BookCard = ({ book }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
   const { handleAddToCart } = useOutletContext();
 
@@ -14,7 +17,17 @@ const BookCard = ({ book }) => {
   const placeholderImage = "src/img/capa_ilustrativa.png";
 
   return (
-    <div onClick={() => handleBookClick(book.id)} className='max-w-48 p-3 cursor-pointer flex flex-col gap-3 items-center rounded z-10 transform transition-transform duration-300 hover:scale-105'>
+    <div 
+      onClick={() => handleBookClick(book.id)} 
+      onMouseEnter={() => setIsHovered(true)} 
+      onMouseLeave={() => setIsHovered(false)} 
+      className='max-w-48 p-3 cursor-pointer flex flex-col gap-3 items-center rounded z-10 transform transition-transform duration-300 hover:scale-105 relative'
+    >
+      {isHovered && (
+        <div className='absolute top-2 right-0'>
+          <DeleteButton content={<FaTrashAlt />} id = {book.id} />
+        </div>
+      )}
       <div>
         <img src={book.image ? book.image : placeholderImage} alt={book.title} />
       </div>

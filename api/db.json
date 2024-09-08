@@ -221,61 +221,6 @@
       "image": ""
     },
     {
-      "id": "d6a0",
-      "title": "Senhora 2: O retorno",
-      "author": "José de Alencar",
-      "publisher": "Cirando Cultural ",
-      "price": "12.70",
-      "description": "",
-      "year": "2010",
-      "category": "Fiction",
-      "image": ""
-    },
-    {
-      "id": "d283",
-      "title": "livro de teste",
-      "author": "José de Alencar",
-      "publisher": "Cirando Cultural ",
-      "price": "25.90",
-      "description": "",
-      "year": "2009",
-      "category": "Fiction",
-      "image": ""
-    },
-    {
-      "id": "8d71",
-      "title": "teste 3",
-      "author": "José de Alencar",
-      "publisher": "Cirando Cultural ",
-      "price": "28.60",
-      "description": "",
-      "year": "2000",
-      "category": "Fiction",
-      "image": ""
-    },
-    {
-      "id": "779f",
-      "title": "teste 2",
-      "author": "José de Alencar",
-      "publisher": "Cirando Cultural ",
-      "price": "32.80",
-      "description": "",
-      "year": "2020",
-      "category": "Fiction",
-      "image": ""
-    },
-    {
-      "id": "b96d",
-      "title": "teste 1",
-      "author": "José de Alencar",
-      "publisher": "Cirando Cultural ",
-      "price": "45.90",
-      "description": "",
-      "year": "2010",
-      "category": "Fiction",
-      "image": ""
-    },
-    {
       "id": "764f",
       "title": "The Kite Runner",
       "author": "Khaled Hosseini",
@@ -318,37 +263,6 @@
       "year": 1949,
       "category": "Fiction",
       "image": ""
-    },
-    {
-      "id": "4084",
-      "title": "livro de teste 2",
-      "author": "José de Alencar",
-      "publisher": "Cirando Cultural ",
-      "price": "25.90",
-      "description": "",
-      "year": "2009",
-      "image": ""
-    },
-    {
-      "id": "87c7",
-      "title": "Terceiro livro de testes",
-      "author": "Monteiro Lobato ",
-      "publisher": "Planeta",
-      "price": "25.90",
-      "description": "",
-      "year": "2020",
-      "image": ""
-    },
-    {
-      "id": "f86e",
-      "title": "Livro de teste 4 ",
-      "author": "Monteiro Lobato ",
-      "publisher": "Cirando Cultural ",
-      "price": "80.45",
-      "description": "",
-      "year": "1919",
-      "image": "",
-      "category": "Didático"
     }
   ]
 }
