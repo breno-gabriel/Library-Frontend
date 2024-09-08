@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import formatCurrencyBRL from '@/utils';
+import { useState } from 'react';
+import { FaTrashAlt } from "react-icons/fa";
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import AddCartButton from './AddCartButton';
-import formatCurrencyBRL from '@/utils';
-import { FaTrashAlt } from "react-icons/fa";
 import DeleteButton from './DeleteButton';
 
 const BookCard = ({ book }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [updateForms, setUpdateForms] = useState(false);
   const navigate = useNavigate();
   const { handleAddToCart } = useOutletContext();
 
   const handleBookClick = (id) => {
-    navigate(`/purchase/book-details/${id}`);
+    navigate(`/book-details/${id}`);
   };
 
   const placeholderImage = "src/img/capa_ilustrativa.png";

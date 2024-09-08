@@ -58,7 +58,7 @@ const formSchema = z.object({
     }),
 });
 
-const SaleForms = ({ setForms }) => {
+const CreateBookForm = ({ setForms, apiFunction }) => {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -85,6 +85,7 @@ const SaleForms = ({ setForms }) => {
         } catch (error) {
             console.error('Error:', error);
         }
+
     };
 
     return (
@@ -226,4 +227,4 @@ const SaleForms = ({ setForms }) => {
     );
 }
 
-export default SaleForms;
+export default CreateBookForm;

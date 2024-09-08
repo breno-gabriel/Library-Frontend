@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaTrashAlt } from "react-icons/fa";
 import axios from 'axios';
 
 function DeleteButton({ content, id }) {
@@ -15,14 +14,12 @@ function DeleteButton({ content, id }) {
       };
 
     return (
-        <div className='delete-button'>
         <button 
             className='text-red-600' 
             onClick={(e) => handleDelete(e)}
         >
             {content}
         </button>
-        </div>
     );
 }
 

@@ -1,26 +1,20 @@
-import { useEffect, useState } from 'react';
-import { Outlet } from 'react-router-dom';
-import Header from './components/Header';
-import "./App.css";
-import Cart from './components/Cart';
-import PurchaseConclusion from './components/PurchaseConclusion';
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+  CardContent
+} from "@/components/ui/card";
+import { useState } from 'react';
 import { FaCheckCircle } from "react-icons/fa";
-import SaleForms from './components/SaleForms';
-import WrapperCard from './components/WrapperCard';
-import axios from 'axios';
-
+import { Outlet } from 'react-router-dom';
+import "./App.css";
+import Cart from './components/Cart';
+import CreateBookForm from './components/CreateBookForm';
+import Header from './components/Header';
+import UpdateBookForms from './components/UpdateBookForms';
 
 function App() {
   const [cart, setCart] = useState(false);
   const [forms, setForms] = useState(false);
+  const [updateForms, setUpdateForms] = useState(false);
   const [purchaseBooks, setPurchaseBooks] = useState([]);
   const [purchaseConclusion, setPurchaseConclusion] = useState(false); 
   const [saleBooks, setSaleBooks] = useState([]);
@@ -32,17 +26,16 @@ function App() {
   return (
     <>
       <Header setForms = {setForms} forms = {forms} />
-      <Outlet context={{ handleAddToCart, saleBooks, setSaleBooks }} />
-      {cart && <Cart purchaseBooks={purchaseBooks} setPurchaseBooks = {setPurchaseBooks} setCart={setCart} setPurchaseConclusion={setPurchaseConclusion}/>}
-      {purchaseConclusion && 
+      <Outlet context={{ handleAddToCart, setUpdateForms, updateForms}} />
+      {/* {cart && <Cart purchaseBooks={purchaseBooks} setPurchaseBooks = {setPurchaseBooks} setCart={setCart} setPurchaseConclusion={setPurchaseConclusion}/>} */}
+      {/* {purchaseConclusion && 
           <Card className="mt-72 mb-60 w-96 h-auto flex flex-col justify-center items-center fixed py-5 z-30">
             <CardContent className = "flex gap-5 items-center pt-2">
               <FaCheckCircle className='text-green-300 text-6xl'/>
               <h2 className='text-xl text-green-300'>Compra realizada</h2>
             </CardContent>
-          </Card>} 
-      {forms && <SaleForms setForms = {setForms}/>}
-
+          </Card>}  */}
+      {forms && <CreateBookForm setForms = {setForms}/>}
     </>
   );
 }

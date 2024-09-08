@@ -1,15 +1,15 @@
 {
   "books": [
     {
-      "id": "1",
-      "title": "Apocalipse Z",
-      "author": "Manel Loureiro",
+      "title": "Apocalipse Z - A ira dos justos",
+      "author": "Manel Loreiro",
       "publisher": "Planeta",
+      "price": "25.90",
+      "description": "Em uma pequena cidade espanhola, um jovem advogado leva uma vida tranquila e rotineira. Um dia, porém, começa a ouvir notícias sobre um incidente médico ocorrido em um país remoto do Cáucaso. Apesar de aparenteme",
+      "year": "2020",
       "image": "",
-      "price": 9,
-      "category": "Horror",
-      "description": "Um thriller de terror que narra a luta pela sobrevivência em um mundo devastado por um apocalipse zumbi.",
-      "year": 2010
+      "category": "Terror",
+      "id": "1"
     },
     {
       "id": "2",
@@ -221,17 +221,6 @@
       "image": ""
     },
     {
-      "id": "764f",
-      "title": "The Kite Runner",
-      "author": "Khaled Hosseini",
-      "publisher": "Bloomsbury",
-      "price": 45,
-      "description": "",
-      "year": 2003,
-      "category": "Fiction",
-      "image": ""
-    },
-    {
       "id": "3d91",
       "title": "O Guarani",
       "author": "José de Alencar",
@@ -239,17 +228,6 @@
       "price": 99.99,
       "description": "",
       "year": 1900,
-      "category": "Fiction",
-      "image": ""
-    },
-    {
-      "id": "4d71",
-      "title": "O triste fim de Policarpo Quaresma",
-      "author": "Lima Barreto",
-      "publisher": "Clara Editora",
-      "price": 32.87,
-      "description": "",
-      "year": 1985,
       "category": "Fiction",
       "image": ""
     },
