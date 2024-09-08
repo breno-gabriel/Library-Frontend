@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
-import Books from '../components/BooksExibition'
+import BooksExibition from '../components/BooksExibition'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -23,7 +23,7 @@ const BookPurchasePage = () => {
 
   return (
     <div>
-        <Books books={books}/>
+        <BooksExibition books={books}/>
     </div>
   )
 }
