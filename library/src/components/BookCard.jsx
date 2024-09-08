@@ -2,14 +2,12 @@ import formatCurrencyBRL from '@/utils';
 import { useState } from 'react';
 import { FaTrashAlt } from "react-icons/fa";
 import { useNavigate, useOutletContext } from 'react-router-dom';
-import AddCartButton from './AddCartButton';
 import DeleteButton from './DeleteButton';
+import BookDetailsButton from './BookDetailButton';
 
 const BookCard = ({ book }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [updateForms, setUpdateForms] = useState(false);
   const navigate = useNavigate();
-  const { handleAddToCart } = useOutletContext();
 
   const handleBookClick = (id) => {
     navigate(`/book-details/${id}`);
@@ -38,7 +36,7 @@ const BookCard = ({ book }) => {
         <p className='text-center font-light text-lg'>{book.publisher}</p>
         <p className='text-center font-bold text-lg text-green-400'>{formatCurrencyBRL(book.price)}</p>
       </div>
-      <AddCartButton book={book} handleAddToCart={handleAddToCart} />
+      <BookDetailsButton />
     </div>
   );
 };

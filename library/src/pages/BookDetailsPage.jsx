@@ -1,12 +1,10 @@
-import formatCurrencyBRL from '@/utils';
 import EditButton from '@/components/EditButton';
+import UpdateBookForms from '@/components/UpdateBookForms';
+import formatCurrencyBRL from '@/utils';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useOutletContext, useParams } from 'react-router-dom';
 import capaIlustrativa from '../img/capa_ilustrativa.png';
-import UpdateBookForms from '@/components/UpdateBookForms';
-import DeleteButton from '@/components/DeleteButton';
-import { Button } from '@/components/ui/button';
 
 const BookDetailsPage = () => {
   const { id } = useParams();

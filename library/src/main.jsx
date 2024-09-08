@@ -3,9 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import './index.css';
-import BookPurchasePage from './pages/BookPurchasePage.jsx';
-import BookSalesPage from './pages/BookSalesPage.jsx';
 import BookDetailsPage from './pages/BookDetailsPage.jsx';
+import BookPurchasePage from './pages/BookPurchasePage.jsx';
 
 // const router = createBrowserRouter([
 //   {

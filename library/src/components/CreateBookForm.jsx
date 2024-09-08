@@ -18,9 +18,8 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue,
-  } from "@/components/ui/select"
+} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
-import WrapperCard from './WrapperCard';
 
 const currentYear = new Date().getFullYear();
 
@@ -58,7 +57,7 @@ const formSchema = z.object({
     }),
 });
 
-const CreateBookForm = ({ setForms, apiFunction }) => {
+const CreateBookForm = ({ setForms }) => {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -85,18 +84,17 @@ const CreateBookForm = ({ setForms, apiFunction }) => {
         } catch (error) {
             console.error('Error:', error);
         }
-
     };
 
     return (
-        <>
+        <div className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50">
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-6 mt-40 z-30 fixed bg-white p-20 rounded-md">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-6 mt-10 px-4 md:px-20 py-10 bg-white rounded-md max-w-lg mx-auto">
                     <div className='flex flex-col gap-3'>
                         <h2 className='text-center font-bold text-3xl'>Adicionando livro</h2>
                         <p className='text-center text-gray-500 text-lg'>Preencha os campos abaixo</p>
                     </div>
-                    <div className='flex flex-col md:flex-row md:gap-20'>
+                    <div className='flex flex-col md:flex-row md:gap-10'>
                         <div className="w-full md:w-1/2 space-y-4">
                             <FormField
                                 control={form.control}
@@ -199,7 +197,7 @@ const CreateBookForm = ({ setForms, apiFunction }) => {
                                         <FormLabel>Categoria</FormLabel>
                                         <FormControl>
                                             <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                                <SelectTrigger className="w-[180px]">
+                                                <SelectTrigger className="w-full">
                                                     <SelectValue placeholder="Selecione uma categoria" />
                                                 </SelectTrigger>
                                                 <SelectContent>
@@ -217,13 +215,13 @@ const CreateBookForm = ({ setForms, apiFunction }) => {
                             />
                         </div>
                     </div>
-                    <div className='flex justify-center gap-10'>
-                        <Button type="submit" className="text-white bg-green-300">Confirmar</Button>
-                        <Button onClick={handleCancelCLick} type="button" className="text-white bg-green-300">Cancelar</Button>
+                    <div className='flex justify-center gap-5'>
+                        <Button type="submit" className="text-white bg-green-300 w-full md:w-32">Confirmar</Button>
+                        <Button onClick={handleCancelCLick} type="button" className="text-white bg-red-300 w-full md:w-32">Cancelar</Button>
                     </div>
                 </form>
             </Form>
-        </>
+        </div>
     );
 }
 
