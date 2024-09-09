@@ -21,7 +21,7 @@ Clone o repositório
 https://github.com/breno-gabriel/Library-Frontend.git
 ```
 
-Vá para o caminho /library (`cd library`)
+No terminal, vá para o caminho /library (`cd library`)
 
 Instale as dependências
 
@@ -29,7 +29,7 @@ Instale as dependências
 npm install
 ```
 
-Volte (`..cd`) e vá para o caminho /api (`cd api`)
+Abra outro terminal e vá para o caminho /api (`cd api`)
 
 Instale o JSON Server
 
