@@ -1,15 +1,9 @@
-import {
-  Card,
-  CardContent
-} from "@/components/ui/card";
 import { useState } from 'react';
-import { FaCheckCircle } from "react-icons/fa";
 import { Outlet } from 'react-router-dom';
 import "./App.css";
-import Cart from './components/Cart';
+import Advice from "./components/Advice";
 import CreateBookForm from './components/CreateBookForm';
 import Header from './components/Header';
-import UpdateBookForms from './components/UpdateBookForms';
 
 function App() {
   const [cart, setCart] = useState(false);
@@ -18,13 +12,16 @@ function App() {
   const [purchaseBooks, setPurchaseBooks] = useState([]);
   const [purchaseConclusion, setPurchaseConclusion] = useState(false); 
   const [saleBooks, setSaleBooks] = useState([]);
+  const [advice, setAdvice] = useState(false); 
+  const [message, setMessage] = useState("");
 
   return (
     <>
       <Header setForms = {setForms} forms = {forms} />
-      <Outlet context={{ setUpdateForms, updateForms}} />
+      <Outlet context={{ setUpdateForms, updateForms, setAdvice, advice, setMessage}} />
       {/* {cart && <Cart purchaseBooks={purchaseBooks} setPurchaseBooks = {setPurchaseBooks} setCart={setCart} setPurchaseConclusion={setPurchaseConclusion}/>} */}
-      {forms && <CreateBookForm setForms = {setForms}/>}
+      {forms && <CreateBookForm setForms = {setForms} advice = {advice} setAdvice = {setAdvice} setMessage = {setMessage}/>}
+      {advice && <Advice message={message} setAdvice={setAdvice}/>}
     </>
   );
 }

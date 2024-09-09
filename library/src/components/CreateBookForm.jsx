@@ -42,9 +42,7 @@ const formSchema = z.object({
     price: z.string().refine((value) => /^\d+(\.\d{1,2})?$/.test(value), {
         message: "O preço precisa estar no formato correto (e.g., 10.00).",
     }),
-    description: z.string().max(250, {
-        message: "Limite de 250 caracteres excedido.",
-    }).optional(),
+    description: z.string().optional(),
     year: z.string().refine((value) => {
         const year = parseInt(value, 10);
         return !isNaN(year) && year > 0 && year <= currentYear;
@@ -57,7 +55,7 @@ const formSchema = z.object({
     }),
 });
 
-const CreateBookForm = ({ setForms }) => {
+const CreateBookForm = ({ setForms, advice, setAdvice, setMessage }) => {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -81,6 +79,8 @@ const CreateBookForm = ({ setForms }) => {
             const response = await axios.post('http://localhost:3000/books', values);
             console.log('Response:', response.data);
             setForms(false);
+            setMessage("Livro cadastrado com sucesso");
+            setAdvice(true);
         } catch (error) {
             console.error('Error:', error);
         }

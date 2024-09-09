@@ -3,10 +3,13 @@ import Header from '../components/Header'
 import BooksExibition from '../components/BooksExibition'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useOutletContext, useParams } from 'react-router-dom';
 
-const BookPurchasePage = () => {
+const Home = () => {
 
   const [books, setBook] = useState([]);
+  const { setUpdateForms, updateBook, updateForms, setAdvice, advice, setMessage } = useOutletContext();
+
 
   const handleFetch = async () => {
     try {
@@ -23,9 +26,9 @@ const BookPurchasePage = () => {
 
   return (
     <div>
-        <BooksExibition books={books}/>
+        <BooksExibition books={books} setAdvice = {setAdvice} advice = {advice} setMessage = {setMessage}/>
     </div>
   )
 }
 
-export default BookPurchasePage
+export default Home

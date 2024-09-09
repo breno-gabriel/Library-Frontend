@@ -41,9 +41,7 @@ const formSchema = z.object({
     price: z.string().refine((value) => /^\d+(\.\d{1,2})?$/.test(value), {
         message: "O preço precisa estar no formato correto (e.g., 10.00).",
     }),
-    description: z.string().max(250, {
-        message: "Limite de 250 caracteres excedido.",
-    }).optional(),
+    description: z.string().optional(),
     year: z.string().refine((value) => {
         const year = parseInt(value, 10);
         return !isNaN(year) && year > 0 && year <= currentYear;
@@ -56,7 +54,7 @@ const formSchema = z.object({
     }),
 });
 
-const UpdateBookForms = ({ setUpdateForms, id }) => {
+const UpdateBookForms = ({ setUpdateForms, id, setAdvice, advice, setMessage }) => {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -77,6 +75,8 @@ const UpdateBookForms = ({ setUpdateForms, id }) => {
             const response = await axios.put(`http://localhost:3000/books/${id}`, values);
             console.log('Livro atualizado:', response.data);
             setUpdateForms(false);
+            setAdvice(true); 
+            setMessage("Livro atualizado com sucesso");
             return response.data;
           } catch (error) {
             console.error('Erro ao atualizar livro:', error);

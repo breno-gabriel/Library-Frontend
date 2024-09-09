@@ -9,7 +9,7 @@ import capaIlustrativa from '../img/capa_ilustrativa.png';
 const BookDetailsPage = () => {
   const { id } = useParams();
   const [book, setBook] = useState(null);
-  const { handleAddToCart, setUpdateForms, updateBook, updateForms } = useOutletContext();
+  const { setUpdateForms, updateBook, updateForms, setAdvice, advice, setMessage } = useOutletContext();
 
   useEffect(() => {
     const fetchBookDetails = async () => {
@@ -56,7 +56,7 @@ const BookDetailsPage = () => {
       {updateForms && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className=" p-8 rounded-lg shadow-lg w-full max-w-lg">
-            <UpdateBookForms id={book.id} setUpdateForms={setUpdateForms} />
+            <UpdateBookForms id={book.id} setUpdateForms={setUpdateForms} setAdvice = {setAdvice} advice = {advice} setMessage = {setMessage} />
           </div>
         </div>
       )}

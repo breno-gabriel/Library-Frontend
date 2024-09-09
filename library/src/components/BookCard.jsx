@@ -5,7 +5,7 @@ import { useNavigate, useOutletContext } from 'react-router-dom';
 import DeleteButton from './DeleteButton';
 import BookDetailsButton from './BookDetailButton';
 
-const BookCard = ({ book }) => {
+const BookCard = ({ book, setAdvice, advice, setMessage }) => {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ const BookCard = ({ book }) => {
     >
       {isHovered && (
         <div className='absolute top-2 right-0'>
-          <DeleteButton content={<FaTrashAlt />} id = {book.id} />
+          <DeleteButton content={<FaTrashAlt />} id = {book.id} setAdvice = {setAdvice} advice = {advice} setMessage = {setMessage}/>
         </div>
       )}
       <div>
