@@ -17,28 +17,40 @@ A BookParadise é uma aplicação de gerenciamento de estoque de livros. Nela, �
 
 Clone o repositório
 
-`https://github.com/breno-gabriel/Library-Frontend.git`
+ ```bash
+https://github.com/breno-gabriel/Library-Frontend.git
+```
 
 Vá para o caminho /library (`cd library`)
 
 Instale as dependências
 
-`npm install`
+```bash
+npm install
+```
 
 Volte (`..cd`) e vá para o caminho /api (`cd api`)
 
 Instale o JSON Server
 
-`npm install json-server`
+```bash
+npm install json-server
+```
 
 Execute o JSON Server 
 
-`npx json-server db.json`
+```bash
+npx json-server db.json
+```
 
 Rode o projeto
 
-`npm run dev`
+```bash
+npm run dev
+```
 
 Abra o link
 
-`http://localhost:5173/`
+```bash
+http://localhost:5173/
+```
