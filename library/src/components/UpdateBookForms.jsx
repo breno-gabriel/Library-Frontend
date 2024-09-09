@@ -78,22 +78,22 @@ const UpdateBookForms = ({ setUpdateForms, id, setAdvice, advice, setMessage }) 
             setAdvice(true); 
             setMessage("Livro atualizado com sucesso");
             return response.data;
-          } catch (error) {
+        } catch (error) {
             console.error('Erro ao atualizar livro:', error);
             throw error;
-          }
+        }
     };
 
     return (
-        <>
-            <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-                    <div className="bg-white p-10 rounded-md w-full max-w-3xl">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="bg-white p-6 md:p-10 rounded-md w-full max-w-3xl h-[90vh] max-h-[90vh] overflow-auto">
+                <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col h-full">
                         <div className='flex flex-col gap-3'>
                             <h2 className='text-center font-bold text-3xl'>Atualizando livro</h2>
                             <p className='text-center text-gray-500 text-lg'>Preencha os campos abaixo</p>
                         </div>
-                        <div className='flex flex-col md:flex-row md:gap-20'>
+                        <div className='flex flex-col md:flex-row md:gap-10 flex-grow overflow-auto'>
                             <div className="w-full md:w-1/2 space-y-4">
                                 <FormField
                                     control={form.control}
@@ -216,12 +216,12 @@ const UpdateBookForms = ({ setUpdateForms, id, setAdvice, advice, setMessage }) 
                         </div>
                         <div className='flex justify-center gap-10 mt-10'>
                             <Button type="submit" className="text-white bg-green-300">Confirmar</Button>
-                            <Button onClick={() => setUpdateForms(false)} type="button" className="text-white bg-green-300">Cancelar</Button>
+                            <Button onClick={() => setUpdateForms(false)} type="button" className="text-white bg-red-300">Cancelar</Button>
                         </div>
-                    </div>
-                </form>
-            </Form>
-        </>
+                    </form>
+                </Form>
+            </div>
+        </div>
     );
 }
 
